@@ -2,7 +2,7 @@ import './App.css';
 import React from 'react';
 import Input from './components/Input';
 import Display from './components/Display';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 
 // High level plan - 
@@ -38,7 +38,7 @@ import { useState } from 'react';
 
 function App() {
 
-  const fetchApi = (id) => {
+  const fetchApi = () => {
     const apiUrl = `https://api.imgflip.com/get_memes`;
     fetch(apiUrl)
     .then(response => response.json())
@@ -53,25 +53,26 @@ function App() {
   .catch(error => {
     console.log("Error fetching API:", error);
   });
-  
   }
 
+  useEffect(() => {
+    fetchApi();
+
+  }, []);
+
   const [selectedMeme, setSelectedMeme] = useState(null);
-
-
-
 
   function handleClick() {
     fetchApi();
   };
-  
 
   return (
     <div className="App">
-      <h1>Looks Like It's Time</h1>
-      <div> {selectedMeme && <Display selectedMeme={selectedMeme}/>}
-      <Input handleClick={handleClick}/> 
+      <div className="app-container">
+      {selectedMeme && <Display selectedMeme={selectedMeme}/>}
+      <h1 className="title">Looks Like It's Time...to oil up!</h1>  
       </div>
+      <Input handleClick={handleClick}/>
     </div>
   );
 }
