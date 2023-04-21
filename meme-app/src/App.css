@@ -56,8 +56,29 @@
   object-fit: cover;
   height: 450px;
   width: 450px;
+  border-radius: 7px;
 }
 
 .meme-text {
   font-size: 2rem;
+}
+
+.input-text {
+  margin-right: 20px;
+  height: 27px;
+  border: none;
+}
+
+
+
+.genMeme {
+  color: white;
+  background-color: rgb(85, 85, 170);
+  border: none;
+  height: 110px;
+  width: 110px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 50%;
+  cursor: pointer;
 }

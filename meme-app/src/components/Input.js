@@ -8,8 +8,8 @@ const Input = ( {handleClick} ) => {
 
   return (
     <div>
-      <input className="inputText" type="text" placeholder="Top text"></input>
-      <input className="inputText" type="text" placeholder="Bottom text"></input>
+      <input className="input-text" type="text" placeholder="Top text"></input>
+      <input className="input-text" type="text" placeholder="Bottom text"></input>
       <button className="genMeme" onClick={handleClick}>Generate</button>
     </div>
   )
