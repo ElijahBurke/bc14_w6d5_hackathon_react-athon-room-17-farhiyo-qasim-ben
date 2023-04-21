@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+margin-left: 75px;
 }
 
 .App-logo {
@@ -35,4 +35,10 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.meme-image {
+  object-fit: cover;
+  height: 600px;
+  width: 600px;
 }

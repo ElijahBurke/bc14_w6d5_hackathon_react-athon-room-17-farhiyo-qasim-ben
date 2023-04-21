@@ -68,10 +68,10 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Dank Meme Generator</h1>
-      {selectedMeme && <Display selectedMeme={selectedMeme}/>}
-      <Input handleClick={handleClick}/>
-      
+      <h1>Looks Like It's Time</h1>
+      <div> {selectedMeme && <Display selectedMeme={selectedMeme}/>}
+      <Input handleClick={handleClick}/> 
+      </div>
     </div>
   );
 }
